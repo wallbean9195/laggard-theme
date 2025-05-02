@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
 
-body {
+:root {
+  container-name: root;
   --font: 'Inter';
   --custom-app-top-bar-height: var(--space-xs);
   --top-custom-hue: unset;
@@ -15,11 +16,10 @@ body {
   --old-icon-size: 30px
 }
 
-.visual-refresh body {
+body {
 
   &::after,
   &::before {
-    content: "";
     position: absolute;
     width: 100px;
     height: 50px;
@@ -38,12 +38,84 @@ body {
     filter: blur(8px);
     opacity: .5
   }
+}
 
-  &:hover {
+@property --kaitlyn-ify {
+  syntax: "on | off";
+  inherits: false;
+  initial-value: off
+}
+
+@container root style(--kaitlyn-ify:on) {
+
+  .mention,
+  .placeholder__1b31f,
+  .infoSpacing_f4bc97,
+  .messageContent_c19a55,
+  .header__00943 .textContent__00943:not([style]),
+  .username_c19a55,
+  .username__0a06e,
+  .nickname__63ed3,
+  .userTagUsername__63ed3,
+  .name__703b9,
+  .nameTag__37e49 .title_b6c092,
+  .title__9293f,
+  .name__20a53>.overflow__82b15 {
+    &::after {
+      content: "aitlyn"
+    }
+  }
+}
+
+@property --dvd-bouncer {
+  syntax: "always | on-hover | off-hover | blur | off";
+  inherits: false;
+  initial-value: off
+}
+
+@container root style(--dvd-bouncer:always) or style(--dvd-bouncer:on-hover) or style(--dvd-bouncer:off-hover) or style(--dvd-bouncer:blur) {
+  body {
 
     &::after,
     &::before {
-      opacity: 0
+      content: ""
+    }
+  }
+}
+
+@container root style(--dvd-bouncer:on-hover) {
+  body {
+    &:not(:hover) {
+
+      &::after,
+      &::before {
+        opacity: 0
+      }
+    }
+  }
+}
+
+@container root style(--dvd-bouncer:off-hover) or style(--dvd-bouncer:blur) {
+  body {
+    &:hover {
+
+      &::after,
+      &::before {
+        opacity: 0
+      }
+    }
+  }
+}
+
+@container root style(--dvd-bouncer:blur) {
+  body {
+    >:first-child {
+      transition: filter .25s ease;
+
+      &:not(:hover) {
+        transition: filter 1s ease-in;
+        filter: blur(4px)
+      }
     }
   }
 }
@@ -65,24 +137,6 @@ body {
 
   100% {
     top: calc(100% - 50px)
-  }
-}
-
-.mention,
-.placeholder__1b31f,
-.infoSpacing_f4bc97,
-.messageContent_c19a55,
-.header__00943 .textContent__00943:not([style]),
-.username_c19a55,
-.username__0a06e,
-.nickname__63ed3,
-.userTagUsername__63ed3,
-.name__703b9,
-.nameTag__37e49 .title_b6c092,
-.title__9293f,
-.name__20a53>.overflow__82b15 {
-  &::after {
-    content: "aitlyn"
   }
 }
 
