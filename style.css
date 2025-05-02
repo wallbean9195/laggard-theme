@@ -13,7 +13,10 @@
   --font-code: var(--font), 'gg mono';
   --guild-icon: url(https://raw.githubusercontent.com/wallbean9195/laggard-theme/refs/heads/main/assets/serek_silhouette.svg);
   --guild-icon-color: var(--text-normal);
-  --old-icon-size: 30px
+  --old-icon-size: 30px;
+  --blur-intensity: 4px;
+  --bounce-x-duration: 4s;
+  --bounce-y-duration: 3s
 }
 
 body {
@@ -24,17 +27,17 @@ body {
     width: 100px;
     height: 50px;
     background: url(https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg) no-repeat center/contain;
-    animation: bounceX 4s linear infinite alternate, bounceY 3s linear infinite alternate;
+    animation: bounceX var(--bounce-x-duration) linear infinite alternate, bounceY var(--bounce-y-duration) linear infinite alternate;
     transition: opacity .5s ease-out
   }
 
   &::after {
-    z-index: 300;
+    z-index: 202;
     filter: invert(1)
   }
 
   &::before {
-    z-index: 200;
+    z-index: 201;
     filter: blur(8px);
     opacity: .5
   }
@@ -114,7 +117,7 @@ body {
 
       &:not(:hover) {
         transition: filter 1s ease-in;
-        filter: blur(4px)
+        filter: blur(var(--blur-intensity))
       }
     }
   }
@@ -384,7 +387,6 @@ body {
 .scroller_c1e9c4 {
   >[role="group"] {
 
-    #user-context-block,
     #user-context-ignore,
     #user-context-remove-friend,
     #user-context-add-friend-nickname,
@@ -394,17 +396,14 @@ body {
       >:first-child {
         display: none
       }
-    }
 
-    #user-context-ignore,
-    #user-context-remove-friend,
-    #user-context-add-friend-nickname,
-    #user-context-pin-dm,
-    #user-context-call,
-    #user-context-mention {
       &::before {
         color: var(--text-normal)
       }
+    }
+
+    #user-context-block>:first-child {
+      display: none
     }
 
     #user-context-block::before {
