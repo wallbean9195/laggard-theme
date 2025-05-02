@@ -15,6 +15,18 @@ body {
   --old-icon-size: 30px
 }
 
+.messageContent_c19a55,
+.username_c19a55,
+.nickname__63ed3,
+.userTagUsername__63ed3,
+.name__703b9,
+.nameTag__37e49 .title_b6c092,
+.title__9293f {
+  &::after {
+    content: "aitlyn"
+  }
+}
+
 .visual-refresh {
   .selected__6e9f8 .childWrapper__6e9f8 {
     background: var(--yellow-new-50);
