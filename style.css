@@ -68,6 +68,9 @@ body {
   }
 }
 
+.mention,
+.placeholder__1b31f,
+.infoSpacing_f4bc97,
 .messageContent_c19a55,
 .header__00943 .textContent__00943:not([style]),
 .username_c19a55,
@@ -77,7 +80,7 @@ body {
 .name__703b9,
 .nameTag__37e49 .title_b6c092,
 .title__9293f,
-.overflow__82b15 {
+.name__20a53>.overflow__82b15 {
   &::after {
     content: "aitlyn"
   }
