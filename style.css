@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);
+
+body {
+  --font: 'Inter';
+  --custom-app-top-bar-height: var(--space-xs);
+  --top-custom-hue: unset;
+  --bottom-custom-hue: 275;
+  --top-custom-text: "Eject user (sus)";
+  --bottom-custom-text: "Grape user";
+  --font-primary: var(--font), 'gg sans';
+  --font-display: var(--font), 'gg sans';
+  --font-code: var(--font), 'gg mono';
+  --guild-icon: url(https://raw.githubusercontent.com/wallbean9195/laggard-theme/refs/heads/main/assets/serek_silhouette.svg);
+  --guild-icon-color: var(--text-normal);
+  --old-icon-size: 30px
+}
+
+.visual-refresh {
+  .selected__6e9f8 .childWrapper__6e9f8 {
+    background: var(--yellow-new-50)
+  }
+
+  .childWrapper__6e9f8 {
+    >svg {
+      display: none
+    }
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: var(--guild-icon-color);
+      mask-image: var(--guild-icon);
+      mask-size: var(--old-icon-size);
+      mask-position: center;
+      mask-repeat: no-repeat
+    }
+  }
+
+  .chat_f75fb0 {
+    background: var(--background-base-lower)
+  }
+
+  .title__85643,
+  .winButtonsWithDivider_c38106::before {
+    display: none
+  }
+
+  .content_c48ade {
+    margin-top: unset
+  }
+
+  .trailing_c38106 {
+    z-index: 100;
+    gap: var(--space-xs);
+    position: absolute;
+    right: var(--space-xs);
+    height: var(--space-32);
+    width: var(--space-32);
+    margin-top: calc(var(--custom-channel-header-height) + var(--custom-app-top-bar-height))
+  }
+
+  .title_f75fb0,
+  :not(.title_f75fb0, .container__9293f:not([role="navigation"]))>.upperContainer__9293f {
+    width: calc(100% - calc(calc(var(--space-xs) + var(--space-32)) * 2))
+  }
+
+  .container__9293f,
+  .title_f75fb0 {
+    padding: var(--space-xs)
+  }
+
+  .form_f75fb0 {
+    margin-top: var(--space-xs);
+
+    &:has(.typing_b88801) {
+      margin-top: unset
+    }
+  }
+
+  :has(.typing_b88801) {
+    .scroller__36d07 {
+      margin-bottom: var(--space-xl)
+    }
+
+    .bottomBar__0f481 {
+      bottom: var(--space-16)
+    }
+  }
+
+  .slateTextArea_ec4baf {
+    margin-left: unset
+  }
+
+  .container__37e49 {
+    height: 52px
+  }
+
+  .typing_b88801 {
+    top: calc(var(--space-xl) / -1)
+  }
+
+  .panels_c48ade {
+    left: calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)* 2 + var(--space-xs));
+    width: calc(100% - var(--space-xs)* 2 - calc(var(--guildbar-avatar-size) + var(--custom-guild-list-padding)* 2))
+  }
+
+  .container__2637a {
+    margin-bottom: var(--space-sm)
+  }
+
+  .scroller__99e7c {
+    margin-bottom: calc(var(--custom-app-panels-height) + var(--space-md))
+  }
+
+  #vc-spotify-player,
+  .vc-spotify-button:hover,
+  .vc-spotify-lyrics,
+  .vc-spotify-repeat-context,
+  .vc-spotify-repeat-track,
+  .vc-spotify-shuffle-on {
+    background: none
+  }
+
+  .vc-ranb-button,
+  .wrapper_ef3116 {
+    margin-bottom: unset
+  }
+
+  .vc-ranb-button {
+    width: fit-content;
+    align-self: center
+  }
+
+  .wrapper_ef3116 {
+    --guildbar-avatar-size: 48px;
+
+    foreignObject {
+      border-radius: 50%;
+      mask: unset;
+      transition: border-radius 0.1s ease-out
+    }
+
+    .stack_dbd263>[style*="40px"],
+    .wrapper_cc5dd2,
+    foreignObject {
+      height: var(--guildbar-avatar-size) !important;
+      width: var(--guildbar-avatar-size) !important
+    }
+
+    .selected__91816 foreignObject,
+    .selected_e5445c foreignObject,
+    foreignObject:hover {
+      border-radius: 25%;
+      transition: border-radius 0.1s ease-out
+    }
+
+    .stack_dbd263:not([id]) {
+      overflow: hidden scroll;
+
+      >:last-child {
+        z-index: 1
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none
+    }
+  }
+
+  .tutorialContainer__650eb {
+    box-shadow: 0 -16px var(--size-xs) var(--bg-base-tertiary)
+  }
+
+  .folderGroupBackground__48112 {
+    left: var(--size-sm) !important
+  }
+
+  .isExpanded__48112>ul,
+  .sectionDivider__35e86 {
+    height: unset !important
+  }
+
+  .svg_cc5dd2 {
+    contain: unset
+  }
+
+  .circleIcon__5bc7e {
+    height: var(--size-24);
+    width: var(--size-24)
+  }
+
+  .scrollerSpacer__36d07 {
+    height: var(--old-icon-size)
+  }
+
+  :has(.typing_b88801) {
+    .scrollerSpacer__36d07 {
+      height: calc(var(--old-icon-size) - var(--custom-chat-input-margin-bottom))
+    }
+  }
+
+  .enabled__67645:hover,
+  .gradientBackground__11664,
+  .redGlow__67645,
+  .vc-spotify-button:hover,
+  .vc-spotify-shuffle-on {
+    background: none !important
+  }
+
+  .lowerBadge_cc5dd2,
+  .upperBadge_cc5dd2 {
+    border-radius: 50%;
+    box-shadow: 0 0 0 var(--size-4) var(--bg-base-tertiary);
+    z-index: unset
+  }
+}
+
+.container_c48ade {
+  --custom-chat-input-margin-bottom: var(--size-xs)
+}
+
+.avatar__37e49>svg {
+  width: 40px;
+  margin-left: 4px
+}
+
+.enabled__67645:hover,
+.redGlow__67645 {
+  background: none !important
+}
+
+.vc-trans-chat-button {
+  scale: 1;
+  height: 20px;
+  width: 20px
+}
+
+.vc-trans-auto-translate {
+  color: var(--mention-foreground)
+}
+
+[aria-label*="Base64"] {
+  path {
+    stroke: var(--interactive-normal)
+  }
+
+  &:hover path {
+    stroke: var(--interactive-hover);
+    background-color: var(--background-modifier-hover)
+  }
+}
+
+.scroller_c1e9c4 {
+  >[role="group"] {
+
+    #user-context-block,
+    #user-context-ignore,
+    #user-context-remove-friend,
+    #user-context-add-friend-nickname,
+    #user-context-pin-dm,
+    #user-context-call,
+    #user-context-mention {
+      >:first-child {
+        display: none
+      }
+    }
+
+    #user-context-ignore,
+    #user-context-remove-friend,
+    #user-context-add-friend-nickname,
+    #user-context-pin-dm,
+    #user-context-call,
+    #user-context-mention {
+      &::before {
+        color: var(--text-normal)
+      }
+    }
+
+    #user-context-block::before {
+      content: "Obstruct"
+    }
+
+    #user-context-ignore::before {
+      content: "Stuf yoy"
+    }
+
+    #user-context-remove-friend::before {
+      content: "Unfrend"
+    }
+
+    #user-context-add-friend-nickname::before {
+      content: "Add Frend Nickname"
+    }
+
+    #user-context-pin-dm::before {
+      content: "Stick DMs"
+    }
+
+    #user-context-call::before {
+      content: "CALLED"
+    }
+
+    #user-context-mention::before {
+      content: "Pass Ming"
+    }
+
+    #user-context-ban {
+      text-indent: -2rem;
+      text-transform: uppercase;
+
+      &::before {
+        text-indent: 0;
+        content: "Sanction ‌"
+      }
+    }
+
+    &:has(#user-context-block) {
+
+      &::after,
+      &::before {
+        --red-new-28: hsl(var(--red-new-28-hsl)/1);
+        --red-345: var(--red-new-28);
+        --text-danger: color-mix(in oklab, var(--red-345) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --red-new-32: hsl(var(--red-new-32-hsl)/1);
+        --text-feedback-critical: color-mix(in oklab, var(--red-new-32) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
+        --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
+        padding: 8px;
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        min-height: 32px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        border-radius: 2px;
+        color: var(--text-danger);
+        cursor: pointer
+      }
+
+      &::after {
+        --red-new-28-hsl: var(--bottom-custom-hue) calc(var(--saturation-factor, 1)*95.745%) 72.353%;
+        --red-new-32-hsl: var(--bottom-custom-hue) calc(var(--saturation-factor, 1)*87.5%) 68.627%;
+        --opacity-red-8-hsl: var(--bottom-custom-hue) calc(var(--saturation-factor, 1)*64.706%) 50%;
+        content: var(--bottom-custom-text)
+      }
+
+      &::before {
+        color: var(--text-normal);
+        content: var(--top-custom-text)
+      }
+    }
+
+    &:not(:has(:hover))::after {
+      background-color: var(--background-feedback-critical);
+      color: var(--text-feedback-critical);
+      border-radius: 4px
+    }
+  }
+}
