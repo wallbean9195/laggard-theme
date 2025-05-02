@@ -69,12 +69,15 @@ body {
 }
 
 .messageContent_c19a55,
+.header__00943 .textContent__00943:not([style]),
 .username_c19a55,
+.username__0a06e,
 .nickname__63ed3,
 .userTagUsername__63ed3,
 .name__703b9,
 .nameTag__37e49 .title_b6c092,
-.title__9293f {
+.title__9293f,
+.overflow__82b15 {
   &::after {
     content: "aitlyn"
   }
