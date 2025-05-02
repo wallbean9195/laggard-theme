@@ -12,7 +12,37 @@ body {
   --font-code: var(--font), 'gg mono';
   --guild-icon: url(https://raw.githubusercontent.com/wallbean9195/laggard-theme/refs/heads/main/assets/serek_silhouette.svg);
   --guild-icon-color: var(--text-normal);
-  --old-icon-size: 30px
+  --old-icon-size: 30px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg) no-repeat center/contain;
+    filter: invert(1);
+    animation: bounceX 4s linear infinite alternate, bounceY 3s linear infinite alternate
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    left: 0
+  }
+
+  100% {
+    left: calc(100% - 100px)
+  }
+}
+
+@keyframes bounceY {
+  0% {
+    top: 0
+  }
+
+  100% {
+    top: calc(100% - 50px)
+  }
 }
 
 .messageContent_c19a55,
