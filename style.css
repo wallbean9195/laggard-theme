@@ -4,9 +4,7 @@
   container-name: root;
   --font: 'Inter';
   --custom-app-top-bar-height: var(--space-xs);
-  --top-custom-hue: unset;
   --bottom-custom-hue: 275;
-  --top-custom-text: "Eject user (sus)";
   --bottom-custom-text: "Grape user";
   --font-primary: var(--font), 'gg sans';
   --font-display: var(--font), 'gg sans';
@@ -445,9 +443,7 @@ body {
     }
 
     &:has(#user-context-block) {
-
-      &::after,
-      &::before {
+      &::after {
         --red-new-28: hsl(var(--red-new-28-hsl)/1);
         --red-345: var(--red-new-28);
         --text-danger: color-mix(in oklab, var(--red-345) 100%, var(--theme-text-color, #000) var(--theme-text-color-amount, 0%));
@@ -474,17 +470,23 @@ body {
         --opacity-red-8-hsl: var(--bottom-custom-hue) calc(var(--saturation-factor, 1)*64.706%) 50%;
         content: var(--bottom-custom-text)
       }
-
-      &::before {
-        color: var(--text-normal);
-        content: var(--top-custom-text)
-      }
     }
 
-    &:not(:has(:hover))::after {
-      background-color: var(--background-feedback-critical);
-      color: var(--text-feedback-critical);
-      border-radius: 4px
+    &:has(#user-context-block):not(:has(:hover)) {
+      &:active {
+        &::after {
+          content: "";
+          width: 100%;
+          height: 188px;
+          background: url(https://em-content.zobj.net/source/twitter/408/grapes_1f347.png) no-repeat center / contain
+        }
+      }
+
+      &:hover::after {
+        background-color: var(--background-feedback-critical);
+        color: var(--text-feedback-critical);
+        border-radius: 4px
+      }
     }
   }
 }
