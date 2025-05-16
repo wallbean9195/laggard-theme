@@ -26,7 +26,7 @@ body {
     height: 50px;
     background: url(https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg) no-repeat center/contain;
     animation: bounceX var(--bounce-x-duration) linear infinite alternate, bounceY var(--bounce-y-duration) linear infinite alternate;
-    transition: opacity .5s ease-out
+    transition: opacity 0.5s ease-out
   }
 
   &::after {
@@ -49,19 +49,19 @@ body {
 
 @container root style(--kaitlyn-ify:on) {
 
-  .mention,
-  .placeholder__1b31f,
-  .infoSpacing_f4bc97,
-  .messageContent_c19a55,
   .header__00943 .textContent__00943:not([style]),
-  .username_c19a55,
-  .username__0a06e,
-  .nickname__63ed3,
-  .userTagUsername__63ed3,
-  .name__703b9,
+  .infoSpacing_f4bc97,
+  .mention,
+  .messageContent_c19a55,
   .nameTag__37e49 .title_b6c092,
+  .name__20a53>.overflow__82b15,
+  .name__703b9,
+  .nickname__63ed3,
+  .placeholder__1b31f,
   .title__9293f,
-  .name__20a53>.overflow__82b15 {
+  .userTagUsername__63ed3,
+  .username__0a06e,
+  .username_c19a55 {
     &::after {
       content: "aitlyn"
     }
@@ -111,7 +111,7 @@ body {
 @container root style(--dvd-bouncer:blur) {
   body {
     >:first-child {
-      transition: filter .25s ease;
+      transition: filter 0.25s ease;
 
       &:not(:hover) {
         transition: filter 1s ease-in;
@@ -147,7 +147,7 @@ body {
 
     &::before {
       background: var(--white-500);
-      transition: background .15s ease-out
+      transition: background 0.15s ease-out
     }
   }
 
@@ -172,6 +172,7 @@ body {
     background: var(--background-base-lower)
   }
 
+  .sidebar_c48ade::after,
   .title__85643,
   .winButtonsWithDivider_c38106::before {
     display: none
@@ -385,12 +386,12 @@ body {
 .scroller_c1e9c4 {
   >[role="group"] {
 
-    #user-context-ignore,
-    #user-context-remove-friend,
     #user-context-add-friend-nickname,
-    #user-context-pin-dm,
     #user-context-call,
-    #user-context-mention {
+    #user-context-ignore,
+    #user-context-mention,
+    #user-context-pin-dm,
+    #user-context-remove-friend {
       >:first-child {
         display: none
       }
