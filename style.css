@@ -66,6 +66,16 @@ body {
       content: "aitlyn"
     }
   }
+
+  .overflow__82b15:has(.clanTag__972a0) {
+    display: flex;
+
+    >.clanTag__972a0 {
+      order: 1;
+      margin-top: 2px;
+      height: 16px
+    }
+  }
 }
 
 @property --dvd-bouncer {
