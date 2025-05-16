@@ -142,21 +142,21 @@ body {
 }
 
 .visual-refresh {
-  .selected__6e9f8 .childWrapper__6e9f8 {
-    background: var(--yellow-new-50);
+  [data-list-item-id="guildsnav___home"] {
+    &.selected__6e9f8>.childWrapper__6e9f8 {
+      background: var(--yellow-new-50);
 
-    &::before {
-      background: var(--white-500);
-      transition: background 0.15s ease-out
+      &::before {
+        background: var(--white-500);
+        transition: background 0.15s ease-out
+      }
     }
-  }
 
-  .childWrapper__6e9f8 {
-    >svg {
+    svg {
       display: none
     }
 
-    &::before {
+    ::before {
       content: "";
       height: 100%;
       width: 100%;
